@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLCOE TASK</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5, #4adede);
+            background-size: 600% 600%;
+            animation: gradientBG 12s ease infinite;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Animated Gradient Background */
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        
+        nav {
+
+            display: flex;
+
+            justify-content: space-around;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            animation: dropAndStick 3s ease-out forwards;
+        }
+
+        /* Continuous animation: drop down, then slide back up to top */
+        @keyframes dropAndStick {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            40% {
+                transform: translateY(100px);
+                opacity: 1;
+            }
+
+            /* drop down */
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            /* move up & stick at top */
+        }
+
+
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+            animation: slideIn 2s ease-out;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: white;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd369;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+       
+
+
+
+        /* Sections */
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero h1 {
+            font-size: 3rem;
+            animation: slideIn 2s ease-out;
+            
+        }
+        .hero h1:hover{
+            text-decoration: underline;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            animation: fadeIn 3s ease-in;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Button Animation */
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background: #ff6ec4;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+      
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        #contact :hover {
+          color: black;
+          text-decoration:underline;
+        }
+        #about:hover{
+            color: black;
+            text-decoration:underline;
+           font-size: 20px;
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to My Website</h1>
+        <p>A simple single-page site with animations 🚀</p>
+        <button class="btn">Get Started</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Us</h1>
+        <p>we are focuses on building modern, user-friendly, and visually engaging websites. By combining clean design principles with creative CSS animations, we aim to deliver projects that are both functional and aesthetically appealing. This site is a demonstration of how thoughtful design and simple code can come together to create an interactive experience
+            This project showcases animations, hover effects, and smooth scrolling.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Get in touch with us at:</p>
+        <p><b>Email:</b> anuragmshr2006@gmail.com</p>
+        <p><b>Phone:</b> +91 8317027190</p>
+    </section>
+
+</body>
+
+</html>
